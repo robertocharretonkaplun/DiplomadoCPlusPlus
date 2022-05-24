@@ -1,6 +1,22 @@
+// Standar Libs
 #include <iostream>
 #include <string>
+// Externals
+
+// Locals
+#include "Prerequisites.h"
+
+
 using namespace std;
+
+string nombrePrograma = "DiplomadoCPlusPlus";
+const float PI = 3.1416f;
+
+void Suma() {
+  cout << "Resultado: " << PI + 5.0f << endl;
+  ID_DriverVersion = PI + 5.0f;
+  cout << "ID_DriverVersion: " << ID_DriverVersion << endl;
+}
 
 int main() {
   /* MODULO 3 */
@@ -52,6 +68,46 @@ int main() {
   cout << "bool to bit: " << boolToBit << endl;
 
   // Constantes en C++
+  const int IDVersion = 342;
+  
+
+  // Que es una variable constante?
+  // Es una variable la cual tiene un valor que nunca cambiara.
+  
+  // Porque debo utilizar una variable constante?
+  // Porque generamos valores estandarizados que no se van a modificar.
+  
+  // Existe algun riesgo 
+  // Inyeccion de datos a la memoria RAM.
+  cout << "IDVersion: " << IDVersion << endl;
+
+  // Staticos en C++
+  static int ControlIDNum = 17000;
+
+  // Que es una variable estatica?
+  // Es una variable la cual puede ser modificada pero solo como un valor inicializado.
+
+  // Variables Globales en C++
+
+  // Uso
+  Suma(); // Llamada de una funcion
+  float sumaPI = PI + 10;
+
+  cout << "SumaPI: " << sumaPI << endl;
+
+  // Sobre escritura de una variable Global
+  cout << "Nombre de mi proyecto: " << nombrePrograma << endl;
+
+  nombrePrograma = "Diplomado C++";
+
+  cout << "Nombre de mi proyecto actualizado: " << nombrePrograma << endl;
+
+  ID_DriverVersion = ID_DriverVersion + 10;
+  cout << "ID_DriverVersion actualizo: " << ID_DriverVersion << endl;
+
+
+  cout << "Informacion que se encuentra en el header: " << getIDDriverVersion() << endl;
+
 
   return 0;
 }
