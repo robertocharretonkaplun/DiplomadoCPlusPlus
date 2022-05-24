@@ -51,6 +51,7 @@ int main() {
   int boolToBit = sizeof(bool) * 8;
   cout << "bool to bit: " << boolToBit << endl;
 
+  // Constantes en C++
 
   return 0;
 }
