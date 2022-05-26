@@ -1,6 +1,7 @@
 // Standar Libs
 #include <iostream>
 #include <string>
+#include <vector>
 // Externals
 
 // Locals
@@ -109,6 +110,56 @@ int main() {
   cout << "Informacion que se encuentra en el header: " << getIDDriverVersion() << endl;
 
 
+  /* Modulo 4: Arreglos y Vectores */
+  // Que es un arreglo: Un conjunto de datos ordenados.
+  // Ejemplo: frutas: Pera, manzana, uvas, duraznos . . .
+  // Estructura General: Tipo-nombre-Tamano=Contenido
+  
+  // ARREGLOS UNIDIMENCIONALES
+
+  // Inicializacion 
+  string frutas[10] = { "Pera", "Manzana", "Uvas", "Duraznos", "Platano" };
+  string colores[] = {"Rojo", "Azul", "Verde"};
+  int edades[10];
+
+  float calificaciones[5] = { 6.6f, 5.0f, 8.0f, 7.0f, 10.0f };
+  // Modificacion de una posicion en el arreglo
+  calificaciones[0] = 9.0f;
+  int sizeOfCalificaciones = sizeof(calificaciones)/ sizeof(float);
+
+  cout << "Size in memory from calificaciones: " << sizeof(calificaciones) << endl;
+  cout << "Size in memory from float: " << sizeof(float) << endl;
+  cout << "Size of calificaciones: " << sizeOfCalificaciones << endl;
+
+  for (int i = 0; i < sizeOfCalificaciones; i++)
+  {
+    cout << "[" << i << "]" << calificaciones[i] << endl;
+  }
+
+  //Arreglos bidimensionales 
+  // Inicializacion 1
+  string estudiantes1[3][3] = { "Alvaro" ,"Roberto" , "Fernandad" ,
+                               "Victor" , "Saul", "Pedro",
+                               "Alfredo", "Gabriela", "Mario" };
+  // Inicializacion 2
+  string estudiantes2[3][3] = {
+                                {"Alvaro" ,"Roberto" , "Fernandad"},
+                                {"Victor" , "Saul", "Pedro"       },
+                                {"Alfredo", "Gabriela", "Mario"   }
+                              };
+  // Modificacion de un arreglo bidimensional
+  estudiantes1[0][2] = "Fernanda";
+  string estudianteprueba = estudiantes1[0][2];
+
+  cout << estudianteprueba << endl;
+
+
+  // VECTORES - Incluir la libria de vector
+  // Definir un vector
+  vector<string> contrasenas;
+  contrasenas.push_back("lsdknhfcs");
+  contrasenas.push_back("ELONMusk");
+  cout << "Contrasena: " << contrasenas[0] << endl;
   return 0;
 }
 
