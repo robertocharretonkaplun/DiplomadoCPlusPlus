@@ -207,7 +207,15 @@ int main() {
 
   cout << "Tu nombre es: " << nombre2 << endl;
 
-
+  int a;
+  int b;
+  int r;
+  cout << "Ingresa el valor 1: ";
+  cin >> a;
+  cout << "Ingresa el valor 2: ";
+  cin >> b;
+  r = a + b;
+  cout << "El resultado de la suma de " << a << "+" << b << " es: " << r << endl;
   return 0;
 }
 
