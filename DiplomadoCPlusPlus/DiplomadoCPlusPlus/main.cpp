@@ -33,7 +33,7 @@ int main() {
   // char -> Maneja un caracter simple. Ejemplo = 't'
   char letra = 'r';
   // bool -> Maneja valores que pueden ser verdaderos o falsos. Ejemplo = true/false
-  bool laPuertaEstaAbierta = false;
+  //bool laPuertaEstaAbierta = false;
   // string -> Es una cadena de caracteres. Es necesario incluir la libreria de 
   // string para que esta variable funcione. Ejemplo = "Hola soy una cadena"
   string nombre = "Pepe";
@@ -308,7 +308,32 @@ int main() {
   {
     cout << "C no es mayor que D" << endl;
   }
-
+  // Operador relacional Mayor o igual: '>='; Ejemplo:
+  if (C >= D)
+  {
+    cout << "C es mayor o igual que D" << endl;
+  }
+  else
+  {
+    cout << "C no es mayor o igual que D" << endl;
+  }
+  // Operador relacional Menor o igual: '<='; Ejemplo:
+  if (C <= D)
+  {
+    cout << "C es menor o igual que D" << endl;
+  }
+  else
+  {
+    cout << "C no es menor o igual que D" << endl;
+  }
+  if (C != D)
+  {
+    cout << "C es diferente que D" << endl;
+  }
+  else
+  {
+    cout << "C no es diferente que D" << endl;
+  }
 
 
   // CONDICIONALES: Son porciones de codigo que se encargan de validar una comparacion
@@ -389,6 +414,71 @@ int main() {
   }
   else {
     cout << "Rayos no tengo mis tortillas" << endl;
+  }
+  system("cls");
+
+  // OPERADORES LOGICOS: Producen un resultado de verdero o falseo (Booleano)
+  bool laPuertaEstaAbierta = false;
+  bool tengoLlave = false;
+
+
+  // La puerta esta cerrada y tenemos la llave para abrirla
+  laPuertaEstaAbierta = false;
+  tengoLlave = true;
+
+  // Operador Logico AND: '&&'. Ejemplo: A == true && B == false; Resultado es verdadero.
+  if (laPuertaEstaAbierta == false && tengoLlave == true)
+  {
+    cout << "Pude abrir la puerta" << endl;
+  }
+
+  laPuertaEstaAbierta = true;
+  // Operador Logico OR: '||'. Ejemplo: A == true || B == true; Resultado es que es verdadero si alguno es true
+  if (laPuertaEstaAbierta == true || tengoLlave == false)
+  {
+    cout << "Pude abrir la puerta sin importar que no tengo la llave." << endl;
+  }
+
+
+  tengoLlave = false;
+  // Operador Logico Negacion: '!'. Ejemplo: !A; Resultado es verdadero si A no es true
+  if (!tengoLlave)
+  {
+    cout << "No tengo la llave y por lo tanto no puedo entrar al cuarto" << endl;
+  }
+  else {
+    cout << "Tengo la llave y por lo tanto puedo entrar al cuarto" << endl;
+  }
+
+
+  system("cls");
+  // PROYECTO 1: Calculadora
+  int A;
+  int B;
+  int opcion;
+
+  // Requerimientos
+  // 1) Menu por el cual navegar a las opciones de la calculadora
+  // 2) Mostrar las cuatro operaciones principales
+  //   1. Suma
+  //   2. Resta
+  //   3. Multiplicacion
+  //   4. Division
+  // 3) Historial de resultados - Continuar cuando veamos el modulo 6
+  cout << "MENU" << endl;
+  cout << "Opciones" << endl;
+  cout << "1. Suma" << endl;
+  cout << "2. Resta" << endl;
+  cout << "3. Multiplicacion" << endl;
+  cout << "4. Division" << endl;
+  cout << "Ingresa la opcion deseada: ";
+  cin >> opcion;
+
+  if (opcion == 1)
+  {
+    // Ingresa el primer valor de la suma
+    // Ingresa el segundo valor de la suma
+    // Imprimir el resultado de nuestra operacion
   }
   return 0;
 }
